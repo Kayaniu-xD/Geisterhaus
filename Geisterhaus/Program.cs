@@ -4,15 +4,14 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Random zufall = new Random();
         const int groesse = 3;
 
         // Merkt sich, welche Räume schon durchsucht wurden (Bonus 3)
         bool[,] besucht = new bool[groesse, groesse];
 
         // Bonus 1: Geist bei jedem Programmstart zufällig platzieren
-        int geistZeile = zufall.Next(0, groesse);
-        int geistSpalte = zufall.Next(0, groesse);
+        int geistZeile = Random.Shared.Next(0, groesse);
+        int geistSpalte = Random.Shared.Next(0, groesse);
 
         // Bonus 2: Der Spieler hat so viele Versuche, wie das Haus Zeilen hat
         int versucheUebrig = groesse;
